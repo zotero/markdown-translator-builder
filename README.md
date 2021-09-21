@@ -1,7 +1,9 @@
 # Markdown Translator Builder
 
 ```
-git clone https://github.com/zotero/markdown-translator-builder
+git clone https://github.com/mrtcode/markdown-translator-builder.git
+cd markdown-translator-builder
+npm install
 ```
 
 Edit translator and update `lastUpdated` in `src/translator.js` metadata.
