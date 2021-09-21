@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mkdir -p build
+
+# Browserify and inject bundle into translator.js.
+# Remove HTMLParser initialization line because it tries to access
+# window object which doesn't exist in translators environment
+browserify src/main.js \
+  | sed "/let bundle;/r /dev/stdin" src/translator.js \
+  | sed '/var HTMLParser =/d' > build/markdown.js

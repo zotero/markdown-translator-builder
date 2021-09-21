@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir -p build
+browserify src/main.js | sed '/var HTMLParser =/d' > build/test-bundle.js
+mocha
+rm build/test-bundle.js
