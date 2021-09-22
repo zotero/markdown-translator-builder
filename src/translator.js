@@ -3,7 +3,7 @@
 	"label": "Markdown",
 	"creator": "Martynas Bagdonas",
 	"target": "md",
-	"minVersion": "2.1.9",
+	"minVersion": "5.0.97",
 	"maxVersion": "",
 	"priority": 50,
 	"displayOptions": {
