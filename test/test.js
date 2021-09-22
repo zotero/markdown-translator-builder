@@ -54,9 +54,9 @@ describe('Markdown Translator', function () {
   <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4" alt=""></p>
   <p><img src="https://static01.nyt.com/images/2020/07/30/science/30VIRUS-FUTURE3-jump/merlin_174267405_2f8e4d59-b785-4231-aea5-476014cc6306-jumbo.jpg?quality=90&auto=webp" alt=""></p>
 	<p><img data-attachment-key="DDAAFF11"/></p>
-
-  <p><span class="highlight" data-annotation="%7B%22parentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2F3820982%2Fitems%2FRSBTC6WA%22%2C%22uri%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2F3820982%2Fitems%2FPH3XGS7W%22%2C%22position%22%3A%7B%22pageIndex%22%3A4%2C%22rects%22%3A%5B%5B320.40026855%2C344.76534922848003%2C544.8284741526363%2C355.92280274877004%5D%2C%5B306.24053955%2C331.56332285848003%2C544.2454691574964%2C343.1658668218%5D%2C%5B306.24005126%2C318.60375864848004%2C454.4506083824394%2C329.76121216877004%5D%5D%7D%7D">"The Z’ factor is a useful tool for evaluating bioassay qualities[17]. In general, a Z’ value above 0.5 suggests that an assay is robust enough for HTS."</span> <span class="citation" data-citation="%7B%22citationItems%22%3A%5B%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2F3820982%2Fitems%2FRSBTC6WA%22%5D%2C%22locator%22%3A%225%22%7D%5D%2C%22properties%22%3A%7B%7D%7D">{citation}</span></p>
-	<p><span class="citation" data-citation="%7B%22citationItems%22%3A%5B%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2F3820982%2Fitems%2F5WHB5RZX%22%5D%2C%22itemData%22%3A%7B%22id%22%3A1780%2C%22type%22%3A%22article-journal%22%2C%22container-title%22%3A%22n%20engl%20j%20med%22%2C%22language%22%3A%22en%22%2C%22page%22%3A%223%22%2C%22source%22%3A%22Zotero%22%2C%22title%22%3A%22Not%20a%20Perfect%20Storm%20%E2%80%94%20Covid-19%20and%20the%20Importance%20of%20Language%22%2C%22author%22%3A%5B%7B%22family%22%3A%22Brandt%22%2C%22given%22%3A%22Allan%20M%22%7D%2C%7B%22family%22%3A%22Botelho%22%2C%22given%22%3A%22Alyssa%22%7D%5D%2C%22issued%22%3A%7B%22date-parts%22%3A%5B%5B%222020%22%5D%5D%7D%7D%2C%22locator%22%3A%221494%22%7D%5D%2C%22properties%22%3A%7B%7D%7D">(Brandt and Botelho, 2020, p. 1494)</span></p>
+	<p><span class="highlight" data-annotation="%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2F4100175%2Fitems%2FFNAJ9YSE%22%2C%22pageLabel%22%3A%22796%22%2C%22position%22%3A%7B%22pageIndex%22%3A6%2C%22rects%22%3A%5B%5B259.03%2C402.442%2C292.362%2C415.207%5D%2C%5B62.249%2C391.731%2C292.373%2C401.147%5D%2C%5B62.249%2C379.769%2C292.359%2C389.184%5D%2C%5B62.249%2C367.807%2C267.885%2C377.222%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2F4100175%2Fitems%2FG4VAML62%22%5D%2C%22locator%22%3A%22796%22%7D%7D">“HP and LP concentrations were unchanged from 0 to 12 weeks in all three groups and there were no differences in the relative changes between groups”</span> <span class="citation" data-citation="%7B%22citationItems%22%3A%5B%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2F4100175%2Fitems%2FG4VAML62%22%5D%2C%22locator%22%3A%22796%22%7D%5D%2C%22properties%22%3A%7B%7D%7D">(<span class="citation-item">Kongsgaard et al., 2009, p. 796</span>)</span></p>
+	<p><img alt="" data-attachment-key="Y6GAPHKE" data-annotation="%7B%22attachmentURI%22%3A%22http%3A%2F%2Fzotero.org%2Fusers%2F4100175%2Fitems%2FFNAJ9YSE%22%2C%22annotationKey%22%3A%22TBU2AEXL%22%2C%22color%22%3A%22%23ffd400%22%2C%22pageLabel%22%3A%22791%22%2C%22position%22%3A%7B%22pageIndex%22%3A1%2C%22rects%22%3A%5B%5B43.47%2C79.741%2C285.662%2C298.867%5D%5D%7D%2C%22citationItem%22%3A%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2F4100175%2Fitems%2FG4VAML62%22%5D%2C%22locator%22%3A%22791%22%7D%7D" width="404" height="366"><br><span class="citation" data-citation="%7B%22citationItems%22%3A%5B%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2F4100175%2Fitems%2FG4VAML62%22%5D%2C%22locator%22%3A%22791%22%7D%5D%2C%22properties%22%3A%7B%7D%7D">(<span class="citation-item">Kongsgaard et al., 2009, p. 791</span>)</span></p>
+	<p><span class="citation" data-citation="%7B%22citationItems%22%3A%5B%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2F4100175%2Fitems%2FUCXNVHMF%22%5D%7D%2C%7B%22uris%22%3A%5B%22http%3A%2F%2Fzotero.org%2Fusers%2F4100175%2Fitems%2FG4VAML62%22%5D%7D%5D%2C%22properties%22%3A%7B%7D%7D">(<span class="citation-item">Klambauer et al., 2017</span>; <span class="citation-item">Kongsgaard et al., 2009</span>)</span></p>
   <pre dir="rtl">Preformatted/code block - <strong>B</strong><em>I</em><u>U</u><span style="text-decoration: line-through">S</span><sub>2</sub><sup>2</sup><span style="color: #99CC00">T</span><span style="background-color: #99CC00">B</span><a href="g" rel="noopener noreferrer nofollow">L</a>C
 1
 	2
@@ -118,8 +118,6 @@ describe('Markdown Translator', function () {
   <hr>
 
   <p style="padding-left: 40px" data-indent="1">indent 1</p>
-
-
 `;
 		let markdown = convert(parser.parseFromString(html, 'text/html'));
 
@@ -144,9 +142,12 @@ Paragraph   1 - **B***I*U~S~22TB[L](g)\`C\`
 
 \\[image\\]
 
-"The Z’ factor is a useful tool for evaluating bioassay qualities\\[17\\]. In general, a Z’ value above 0.5 suggests that an assay is robust enough for HTS." [open PDF](zotero://select/library/items/PH3XGS7W) ([citation](zotero://select/library/items/RSBTC6WA))
+“HP and LP concentrations were unchanged from 0 to 12 weeks in all three groups and there were no differences in the relative changes between groups” ([Kongsgaard et al., 2009, p. 796](zotero://select/library/items/G4VAML62)) ([pdf](zotero://open-pdf/library/items/FNAJ9YSE?page=7))
 
-([Brandt and Botelho, 2020, p. 1494](zotero://select/library/items/5WHB5RZX))
+\\[image\\] ([pdf](zotero://open-pdf/library/items/FNAJ9YSE?page=2&annotation=TBU2AEXL))  
+([Kongsgaard et al., 2009, p. 791](zotero://select/library/items/G4VAML62))
+
+([Klambauer et al., 2017](zotero://select/library/items/UCXNVHMF); [Kongsgaard et al., 2009](zotero://select/library/items/G4VAML62))
 
 \`\`\`
 Preformatted/code block - BIUS22TBLC

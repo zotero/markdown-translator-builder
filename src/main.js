@@ -36,6 +36,7 @@ let turndownService = new TurndownService({
 turndownService.use(turndownPluginGfm.gfm);
 
 function convert(doc) {
+	// Transform `style="text-decoration: line-through"` nodes to <s> (TinyMCE doesn't support <s>)
 	doc.querySelectorAll('span').forEach(function (span) {
 		if (span.style.textDecoration === 'line-through') {
 			let s = doc.createElement('s');
@@ -44,19 +45,17 @@ function convert(doc) {
 		}
 	});
 
+	// Turndown wants pre content inside additional code block
 	doc.querySelectorAll('pre').forEach(function (pre) {
 		let code = doc.createElement('code');
 		code.append(...pre.childNodes);
 		pre.append(code);
 	});
-
-	doc.querySelectorAll('img[data-attachment-key]').forEach(function (img) {
-		img.replaceWith(doc.createTextNode('[image]'));
-	});
-
-	doc.querySelectorAll('span[class="highlight"]').forEach(function (span) {
+	
+	// Insert a PDF link for highlight and image annotation nodes
+	doc.querySelectorAll('span[class="highlight"], img[data-annotation]').forEach(function (node) {
 		try {
-			var annotation = JSON.parse(decodeURIComponent(span.getAttribute('data-annotation')));
+			var annotation = JSON.parse(decodeURIComponent(node.getAttribute('data-annotation')));
 		}
 		catch (e) {
 		}
@@ -64,35 +63,47 @@ function convert(doc) {
 		if (annotation) {
 			// annotation.uri was used before note-editor v4
 			let uri = annotation.attachmentURI || annotation.uri;
-			if (typeof uri === 'string') {
-				let selectURI;
+			let position = annotation.position;
+			if (typeof uri === 'string' && typeof position === 'object') {
+				let openURI;
 				let uriParts = uri.split('/');
 				let libraryType = uriParts[3];
 				let key = uriParts[6];
 				if (libraryType === 'users') {
-					selectURI = 'zotero://select/library/items/' + key;
+					openURI = 'zotero://open-pdf/library/items/' + key;
 				}
 				// groups
 				else {
 					let groupID = uriParts[4];
-					selectURI = 'zotero://select/groups/' + groupID + '/items/' + key;
+					openURI = 'zotero://open-pdf/groups/' + groupID + '/items/' + key;
 				}
+				
+				openURI += '?page=' + (position.pageIndex + 1)
+					+ (annotation.annotationKey ? '&annotation=' + annotation.annotationKey : '');
+				
 				let a = doc.createElement('a');
-				a.href = selectURI;
-				a.append('open PDF');
+				a.href = openURI;
+				a.append('pdf');
 				let fragment = doc.createDocumentFragment();
-				fragment.append(' ', a, ' ');
-				span.parentNode.insertBefore(fragment, span.nextSibling);
+				fragment.append(' (', a, ') ');
+				
+				let nextNode = node.nextElementSibling;
+				if (nextNode.classList.contains('citation')) {
+					nextNode.parentNode.insertBefore(fragment, nextNode.nextSibling);
+				}
+				else {
+					node.parentNode.insertBefore(fragment, node.nextSibling);
+				}
 			}
 		}
-
-		if (span.style.textDecoration === 'line-through') {
-			let s = doc.createElement('s');
-			s.append(...span.childNodes);
-			span.replaceWith(s);
-		}
+	});
+	
+	// For now just insert a placeholder for embedded note images
+	doc.querySelectorAll('img[data-attachment-key]').forEach(function (img) {
+		img.replaceWith(doc.createTextNode('[image]'));
 	});
 
+	// Transform citations to links
 	doc.querySelectorAll('span[class="citation"]').forEach(function (span) {
 		try {
 			var citation = JSON.parse(decodeURIComponent(span.getAttribute('data-citation')));
