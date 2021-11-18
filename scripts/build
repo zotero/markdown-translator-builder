@@ -7,4 +7,4 @@ mkdir -p build
 # window object which doesn't exist in translators environment
 browserify src/main.js \
   | sed "/let bundle;/r /dev/stdin" src/translator.js \
-  | sed '/var HTMLParser =/d' > build/markdown.js
+  | sed '/var HTMLParser =/d' > build/Note\ Markdown.js

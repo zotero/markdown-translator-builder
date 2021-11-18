@@ -88,7 +88,7 @@ function convert(doc) {
 				fragment.append(' (', a, ') ');
 				
 				let nextNode = node.nextElementSibling;
-				if (nextNode.classList.contains('citation')) {
+				if (nextNode && nextNode.classList.contains('citation')) {
 					nextNode.parentNode.insertBefore(fragment, nextNode.nextSibling);
 				}
 				else {

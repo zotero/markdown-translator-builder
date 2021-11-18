@@ -1,17 +1,17 @@
 {
 	"translatorID": "154c2785-ec83-4c27-8a8a-d27b3a2eded1",
-	"label": "Markdown",
+	"label": "Note Markdown",
 	"creator": "Martynas Bagdonas",
 	"target": "md",
 	"minVersion": "5.0.97",
 	"maxVersion": "",
 	"priority": 50,
-	"displayOptions": {
-		"exportNotes": true
+	"configOptions": {
+		"noteTranslator": true
 	},
 	"inRepository": true,
 	"translatorType": 2,
-	"lastUpdated": "2021-09-22 16:30:07"
+	"lastUpdated": "2021-11-18 16:41:00"
 }
 
 /*
@@ -44,13 +44,20 @@ let bundle;
 function doExport() {
 	Zotero.setCharacterSet('utf-8');
 	let item;
+	let first = true;
 	while (item = Zotero.nextItem()) {
 		if (item.itemType === 'note' || item.itemType === 'attachment') {
 			let doc = new DOMParser().parseFromString(item.note, 'text/html');
+			// Skip empty notes
+			// TODO: Take into account image-only notes
+			if (!doc.body.textContent.trim()) {
+				continue;
+			}
+			if (!first) {
+				Zotero.write('\n\n---\n\n');
+			}
+			first = false;
 			Zotero.write(bundle.convert(doc));
-			break;
 		}
-		// Only one item can be exported
-		break;
 	}
 }
