@@ -11,7 +11,7 @@
 	},
 	"inRepository": true,
 	"translatorType": 2,
-	"lastUpdated": "2021-11-18 16:41:00"
+	"lastUpdated": "2021-11-24 12:15:00"
 }
 
 /*
@@ -47,7 +47,7 @@ function doExport() {
 	let first = true;
 	while (item = Zotero.nextItem()) {
 		if (item.itemType === 'note' || item.itemType === 'attachment') {
-			let doc = new DOMParser().parseFromString(item.note, 'text/html');
+			let doc = new DOMParser().parseFromString(item.note || '', 'text/html');
 			// Skip empty notes
 			// TODO: Take into account image-only notes
 			if (!doc.body.textContent.trim()) {
