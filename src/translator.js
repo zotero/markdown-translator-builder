@@ -9,9 +9,12 @@
 	"configOptions": {
 		"noteTranslator": true
 	},
+	"displayOptions": {
+		"includeZoteroLinks": true
+	},
 	"inRepository": true,
 	"translatorType": 2,
-	"lastUpdated": "2021-11-24 12:15:00"
+	"lastUpdated": "2021-11-30 14:00:00"
 }
 
 /*

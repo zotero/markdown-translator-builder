@@ -64,7 +64,9 @@ function convert(doc) {
 			// annotation.uri was used before note-editor v4
 			let uri = annotation.attachmentURI || annotation.uri;
 			let position = annotation.position;
-			if (typeof uri === 'string' && typeof position === 'object') {
+			if (Zotero.getOption("includeZoteroLinks")
+				&& typeof uri === 'string'
+				&& typeof position === 'object') {
 				let openURI;
 				let uriParts = uri.split('/');
 				let libraryType = uriParts[3];
@@ -138,7 +140,9 @@ function convert(doc) {
 			}
 
 			span.innerHTML = '(' + items.map((item, i) => {
-				return `<a href="${uris[i]}">${item}</a>`
+				return Zotero.getOption('includeZoteroLinks')
+					? `<a href="${uris[i]}">${item}</a>`
+					: item
 			}).join('; ') + ')';
 		}
 	});
