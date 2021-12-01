@@ -10,11 +10,11 @@
 		"noteTranslator": true
 	},
 	"displayOptions": {
-		"includeZoteroLinks": true
+		"includeAppLinks": true
 	},
 	"inRepository": true,
 	"translatorType": 2,
-	"lastUpdated": "2021-11-30 14:00:00"
+	"lastUpdated": "2021-12-01 11:00:00"
 }
 
 /*

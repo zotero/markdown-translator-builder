@@ -64,7 +64,7 @@ function convert(doc) {
 			// annotation.uri was used before note-editor v4
 			let uri = annotation.attachmentURI || annotation.uri;
 			let position = annotation.position;
-			if (Zotero.getOption("includeZoteroLinks")
+			if (Zotero.getOption("includeAppLinks")
 				&& typeof uri === 'string'
 				&& typeof position === 'object') {
 				let openURI;
@@ -140,7 +140,7 @@ function convert(doc) {
 			}
 
 			span.innerHTML = '(' + items.map((item, i) => {
-				return Zotero.getOption('includeZoteroLinks')
+				return Zotero.getOption('includeAppLinks')
 					? `<a href="${uris[i]}">${item}</a>`
 					: item
 			}).join('; ') + ')';
