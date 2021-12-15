@@ -24,9 +24,17 @@
 */
 
 const expect = require('chai').expect;
-var jsdom = require('jsdom')
+var jsdom = require('jsdom');
+let fs = require('fs');
 
-let fs = require('fs')
+global.Zotero = {
+	getOption(name) {
+		if (name === 'includeAppLinks') {
+			return true;
+		}
+		throw new Error(`Unknown option '${name}'`);
+	}
+}
 
 global.bundle = null;
 
