@@ -1,5 +1,5 @@
 {
-	"translatorID": "154c2785-ec83-4c27-8a8a-d27b3a2eded1",
+	"translatorID": "1412e9e2-51e1-42ec-aa35-e036a895534b",
 	"label": "Note Markdown",
 	"creator": "Martynas Bagdonas",
 	"target": "md",
