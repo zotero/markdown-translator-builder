@@ -126,6 +126,10 @@ describe('Markdown Translator', function () {
   <hr>
 
   <p style="padding-left: 40px" data-indent="1">indent 1</p>
+  
+  <p>[[]]</p>
+  <p>a_b_c a _b_ c a __b__ c</p>
+  <p>\`\`\`test</p>
 `;
 		let markdown = convert(parser.parseFromString(html, 'text/html'));
 
@@ -202,7 +206,13 @@ b
 
 * * *
 
-indent 1`;
+indent 1
+
+[[]]
+
+a_b_c a _b_ c a __b__ c
+
+\`\`\`test`;
 
 		expect(expectedMarkdown).to.equal(markdown);
 	});
