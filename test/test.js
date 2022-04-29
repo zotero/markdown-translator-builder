@@ -170,7 +170,7 @@ Preformatted/code block - BIUS22TBLC
 > 
 > # H
 > 
-> 1.  a
+> 1. a
 
 | 
 a
@@ -191,12 +191,12 @@ b
 
  |
 
--   List (supports any node)
+- List (supports any node)
     
-    1.  One
-    2.  Two
-    3.  Three
-    4.  Other
+    1. One
+    2. Two
+    3. Three
+    4. Other
         
     
 
