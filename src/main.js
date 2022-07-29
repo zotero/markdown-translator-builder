@@ -94,7 +94,7 @@ function convert(doc) {
 	});
 
 	// Turndown wants pre content inside additional code block
-	doc.querySelectorAll('pre').forEach(function (pre) {
+	doc.querySelectorAll('pre:not(.math)').forEach(function (pre) {
 		let code = doc.createElement('code');
 		code.append(...pre.childNodes);
 		pre.append(code);
