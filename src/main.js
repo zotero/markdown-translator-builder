@@ -99,6 +99,27 @@ function convert(doc) {
 		code.append(...pre.childNodes);
 		pre.append(code);
 	});
+
+	doc.querySelectorAll('p').forEach((p) => {
+		let style = p.getAttribute('style');
+		if (style) {
+			let match = style.match(/padding-(left|right): ([0-9]+)px/);
+			if (match) {
+				let px = parseInt(match[2]);
+				if (px > 0 && px % 40 === 0) {
+					let level = px / 40;
+					let spaces = '';
+					for (let i = 0; i < level; i++) {
+						spaces += '\u00A0\u00A0\u00A0\u00A0';
+					}
+					p.insertBefore(doc.createTextNode(spaces), p.firstChild);
+					p.querySelectorAll('br').forEach((br) => {
+						br.parentNode.insertBefore(doc.createTextNode(spaces), br.nextSibling);
+					});
+				}
+			}
+		}
+	});
 	
 	// Insert a PDF link for highlight and image annotation nodes
 	doc.querySelectorAll('span[class="highlight"], img[data-annotation]').forEach(function (node) {
