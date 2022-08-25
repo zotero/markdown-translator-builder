@@ -37,7 +37,7 @@ turndownService.use(turndownPluginGfm.gfm);
 
 // https://github.com/mixmark-io/turndown#overriding-turndownserviceprototypeescape
 let escapes = [
-	[/\\/g, '\\\\'],
+	// [/\\/g, '\\\\'],
 	[/\*/g, '\\*'],
 	[/^-/g, '\\-'],
 	[/^\+ /g, '\\+ '],
