@@ -152,11 +152,11 @@ Paragraph   1 - **B***I*U~S~22TB[L](g)\`C\`
 
 ![](https://static01.nyt.com/images/2020/07/30/science/30VIRUS-FUTURE3-jump/merlin_174267405_2f8e4d59-b785-4231-aea5-476014cc6306-jumbo.jpg?quality=90&auto=webp)
 
-\\[image\\]
+[image]
 
 “HP and LP concentrations were unchanged from 0 to 12 weeks in all three groups and there were no differences in the relative changes between groups” ([Kongsgaard et al., 2009, p. 796](zotero://select/library/items/G4VAML62)) ([pdf](zotero://open-pdf/library/items/FNAJ9YSE?page=7))
 
-\\[image\\] ([pdf](zotero://open-pdf/library/items/FNAJ9YSE?page=2&annotation=TBU2AEXL))  
+[image] ([pdf](zotero://open-pdf/library/items/FNAJ9YSE?page=2&annotation=TBU2AEXL))  
 ([Kongsgaard et al., 2009, p. 791](zotero://select/library/items/G4VAML62))
 
 ([Klambauer et al., 2017](zotero://select/library/items/UCXNVHMF); [Kongsgaard et al., 2009](zotero://select/library/items/G4VAML62))
