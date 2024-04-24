@@ -159,9 +159,11 @@ function convert(doc) {
 					linkText = 'snapshot';
 				}
 				else {
-					openURI += '?page=' + (position.pageIndex + 1)
-						+ (annotation.annotationKey ? '&annotation=' + annotation.annotationKey : '');
+					openURI += '?page=' + (position.pageIndex + 1);
 					linkText = 'pdf';
+				}
+				if (annotation.annotationKey) {
+					openURI += '&annotation=' + annotation.annotationKey;
 				}
 
 				let a = doc.createElement('a');
